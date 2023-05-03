@@ -44,6 +44,6 @@
     refs.modal.classList.toggle('is-hidden');
   }
 })();
-// Modal start//
+// Modal end//
 
 
