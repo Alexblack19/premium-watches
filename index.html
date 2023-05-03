@@ -4,36 +4,46 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Watch Spot</title>
-    <!-- Favicon -->  
-    
-
-
-
-<link rel="apple-touch-icon" sizes="180x180" href="/premium-watches/assets/apple-touch-icon-9ab943d8.png">
-<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnBQMLOClEuGpyAAACyUlEQVRIx5VVy0tUURj/nfuYp9PYWJmJG6tFSkjUIgTFRVEQSrTwD4g2Leo/qIVkBu0io1UtLIggCMJdhC7SXgzSUyU1SWMcnEanRme8j6/FuffOPfchdg73crj3/H7f+/sYwhbzfaGdXQv/GkjCQuHuN/ne2xDYQCb8Jc/jLDkUziABMAEAkkMl0gKQAk3gmyabShcrg8X+4SQkazM/hRcsQYICFeqvLv016URUKd/sTSGGKFQoDkkoXObw2Q7jE1nL/D1/BjHEEYUKOZyCS5ehInI3U33iwMmk8oOD9ahDHBEoFkWg5Vx+BNHSVaracINM0pfHTqIOScTCdeAEClSoPzqNRRuuk04GmVQYQhopxBGFAtlPYMtXoT5v1EYteLVa2CKNdNKo8OVWG1JIuPwg5AGzfMD2SXeuRC/x8JY/LozUd5K8iQKWMvJi6/f+aJ/8dmuDwu1XVk6bOS7foLHZa73L2TlaoDKtUSmvTenZP5fFYHoS6U1zw3XWyM/rMA51HB9/MU0JJJBGaq/SAZp5JaayJOrRfo7tN+Yr6xuoYgOHWU/fVBbzGbsgivkbJxZEobLLA6xRPvJz5unE49Wi1iNJaWSQaGiabWtJNnP83+FTD3MEvgNDGEEMdUgPHF39pltppOXNCj9Vx0daEQ/OhBpBHCnsxp78bfIsI/f1LBJIWHngcWKtVXDlaHLUyAk6Gmv3jk2AwXTf8peRihiSSKOhuWntkVv+5uhgC5LblRMDs+qAG5F5f8Es2XB97l03klYlKNtVgq3DLmS6DxTvk05EpvZ5+jxSnlp0CGSBwtUPF3X9Q/uStLL+7OVQVxYEE6YrgFSDuU/M6gm8LzAQJBggACYMh0DIAlkww01pe5ss6YFwsT3a7VJy2qo9FcgFRzhBjcINh0uTgNHiDQfzPKI5Prh/sHhhYp7+12wMWrTzyzsc7sA/kjd3ZCEv5aMAAAAldEVYdGRhdGU6Y3JlYXRlADIwMjMtMDUtMDNUMTE6NTY6NDErMDA6MDA8SxNCAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDIzLTA1LTAzVDExOjU2OjQxKzAwOjAwTRar/gAAAFd6VFh0UmF3IHByb2ZpbGUgdHlwZSBpcHRjAAB4nOPyDAhxVigoyk/LzEnlUgADIwsuYwsTIxNLkxQDEyBEgDTDZAMjs1Qgy9jUyMTMxBzEB8uASKBKLgDqFxF08kI1lQAAAABJRU5ErkJggg==">
-<link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnBQMLOClEuGpyAAABIklEQVQoz4VRu0oDQRQ9M7PZdTUGtnFRLCNa+ajsYyViYec/2AgRP8C/sLMPIipYW6VTBBUfIJEkYpEgGFzF2ewci03Y2TTe6sI993AeAtkIa+dwkbmzAEAIiAwsrS+5qZqLncpRERIyxwdAQEF9bpumiXpVeCjkIQIS8nUleSYN49vjOXhwRgAnga6RSdQ3uv+4A9fmEJAoRFXqmA9n760OWzfd/btyKjUVyZeyu/VrIujw/trH7FJprR2l/yplmI8bl14pWJ4JpjgRst3YXX3K0hBQ8DBeX08+SNLo7h78UQ0uipXpr1OS/K4dhHCh8i4c+JisV34ueofnC3YOYgAQUHCU2hh701caBglMqkDYUQ08GZjh2W4wq4ig7eCfuv8A4bVsB870I1QAAAAldEVYdGRhdGU6Y3JlYXRlADIwMjMtMDUtMDNUMTE6NTY6NDErMDA6MDA8SxNCAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDIzLTA1LTAzVDExOjU2OjQxKzAwOjAwTRar/gAAAFd6VFh0UmF3IHByb2ZpbGUgdHlwZSBpcHRjAAB4nOPyDAhxVigoyk/LzEnlUgADIwsuYwsTIxNLkxQDEyBEgDTDZAMjs1Qgy9jUyMTMxBzEB8uASKBKLgDqFxF08kI1lQAAAABJRU5ErkJggg==">
-<link rel="manifest" href="data:application/manifest+json;base64,ewogICAgIm5hbWUiOiAiIiwKICAgICJzaG9ydF9uYW1lIjogIiIsCiAgICAiaWNvbnMiOiBbCiAgICAgICAgewogICAgICAgICAgICAic3JjIjogIi9hbmRyb2lkLWNocm9tZS0xOTJ4MTkyLnBuZyIsCiAgICAgICAgICAgICJzaXplcyI6ICIxOTJ4MTkyIiwKICAgICAgICAgICAgInR5cGUiOiAiaW1hZ2UvcG5nIgogICAgICAgIH0sCiAgICAgICAgewogICAgICAgICAgICAic3JjIjogIi9hbmRyb2lkLWNocm9tZS01MTJ4NTEyLnBuZyIsCiAgICAgICAgICAgICJzaXplcyI6ICI1MTJ4NTEyIiwKICAgICAgICAgICAgInR5cGUiOiAiaW1hZ2UvcG5nIgogICAgICAgIH0KICAgIF0sCiAgICAidGhlbWVfY29sb3IiOiAiI2ZmZmZmZiIsCiAgICAiYmFja2dyb3VuZF9jb2xvciI6ICIjZmZmZmZmIiwKICAgICJkaXNwbGF5IjogInN0YW5kYWxvbmUiCn0K">
-<link rel="mask-icon" href="/premium-watches/assets/safari-pinned-tab-a61053c5.svg" color="#5bbad5">
-<meta name="msapplication-TileColor" content="#da532c">
-<meta name="theme-color" content="#ffffff">
-
-
-
- 
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/premium-watches/assets/apple-touch-icon-9ab943d8.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnBQMLOClEuGpyAAACyUlEQVRIx5VVy0tUURj/nfuYp9PYWJmJG6tFSkjUIgTFRVEQSrTwD4g2Leo/qIVkBu0io1UtLIggCMJdhC7SXgzSUyU1SWMcnEanRme8j6/FuffOPfchdg73crj3/H7f+/sYwhbzfaGdXQv/GkjCQuHuN/ne2xDYQCb8Jc/jLDkUziABMAEAkkMl0gKQAk3gmyabShcrg8X+4SQkazM/hRcsQYICFeqvLv016URUKd/sTSGGKFQoDkkoXObw2Q7jE1nL/D1/BjHEEYUKOZyCS5ehInI3U33iwMmk8oOD9ahDHBEoFkWg5Vx+BNHSVaracINM0pfHTqIOScTCdeAEClSoPzqNRRuuk04GmVQYQhopxBGFAtlPYMtXoT5v1EYteLVa2CKNdNKo8OVWG1JIuPwg5AGzfMD2SXeuRC/x8JY/LozUd5K8iQKWMvJi6/f+aJ/8dmuDwu1XVk6bOS7foLHZa73L2TlaoDKtUSmvTenZP5fFYHoS6U1zw3XWyM/rMA51HB9/MU0JJJBGaq/SAZp5JaayJOrRfo7tN+Yr6xuoYgOHWU/fVBbzGbsgivkbJxZEobLLA6xRPvJz5unE49Wi1iNJaWSQaGiabWtJNnP83+FTD3MEvgNDGEEMdUgPHF39pltppOXNCj9Vx0daEQ/OhBpBHCnsxp78bfIsI/f1LBJIWHngcWKtVXDlaHLUyAk6Gmv3jk2AwXTf8peRihiSSKOhuWntkVv+5uhgC5LblRMDs+qAG5F5f8Es2XB97l03klYlKNtVgq3DLmS6DxTvk05EpvZ5+jxSnlp0CGSBwtUPF3X9Q/uStLL+7OVQVxYEE6YrgFSDuU/M6gm8LzAQJBggACYMh0DIAlkww01pe5ss6YFwsT3a7VJy2qo9FcgFRzhBjcINh0uTgNHiDQfzPKI5Prh/sHhhYp7+12wMWrTzyzsc7sA/kjd3ZCEv5aMAAAAldEVYdGRhdGU6Y3JlYXRlADIwMjMtMDUtMDNUMTE6NTY6NDErMDA6MDA8SxNCAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDIzLTA1LTAzVDExOjU2OjQxKzAwOjAwTRar/gAAAFd6VFh0UmF3IHByb2ZpbGUgdHlwZSBpcHRjAAB4nOPyDAhxVigoyk/LzEnlUgADIwsuYwsTIxNLkxQDEyBEgDTDZAMjs1Qgy9jUyMTMxBzEB8uASKBKLgDqFxF08kI1lQAAAABJRU5ErkJggg=="
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnBQMLOClEuGpyAAABIklEQVQoz4VRu0oDQRQ9M7PZdTUGtnFRLCNa+ajsYyViYec/2AgRP8C/sLMPIipYW6VTBBUfIJEkYpEgGFzF2ewci03Y2TTe6sI993AeAtkIa+dwkbmzAEAIiAwsrS+5qZqLncpRERIyxwdAQEF9bpumiXpVeCjkIQIS8nUleSYN49vjOXhwRgAnga6RSdQ3uv+4A9fmEJAoRFXqmA9n760OWzfd/btyKjUVyZeyu/VrIujw/trH7FJprR2l/yplmI8bl14pWJ4JpjgRst3YXX3K0hBQ8DBeX08+SNLo7h78UQ0uipXpr1OS/K4dhHCh8i4c+JisV34ueofnC3YOYgAQUHCU2hh701caBglMqkDYUQ08GZjh2W4wq4ig7eCfuv8A4bVsB870I1QAAAAldEVYdGRhdGU6Y3JlYXRlADIwMjMtMDUtMDNUMTE6NTY6NDErMDA6MDA8SxNCAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDIzLTA1LTAzVDExOjU2OjQxKzAwOjAwTRar/gAAAFd6VFh0UmF3IHByb2ZpbGUgdHlwZSBpcHRjAAB4nOPyDAhxVigoyk/LzEnlUgADIwsuYwsTIxNLkxQDEyBEgDTDZAMjs1Qgy9jUyMTMxBzEB8uASKBKLgDqFxF08kI1lQAAAABJRU5ErkJggg=="
+    />
+    <link rel="manifest" href="data:application/manifest+json;base64,ewogICAgIm5hbWUiOiAiIiwKICAgICJzaG9ydF9uYW1lIjogIiIsCiAgICAiaWNvbnMiOiBbCiAgICAgICAgewogICAgICAgICAgICAic3JjIjogIi9hbmRyb2lkLWNocm9tZS0xOTJ4MTkyLnBuZyIsCiAgICAgICAgICAgICJzaXplcyI6ICIxOTJ4MTkyIiwKICAgICAgICAgICAgInR5cGUiOiAiaW1hZ2UvcG5nIgogICAgICAgIH0sCiAgICAgICAgewogICAgICAgICAgICAic3JjIjogIi9hbmRyb2lkLWNocm9tZS01MTJ4NTEyLnBuZyIsCiAgICAgICAgICAgICJzaXplcyI6ICI1MTJ4NTEyIiwKICAgICAgICAgICAgInR5cGUiOiAiaW1hZ2UvcG5nIgogICAgICAgIH0KICAgIF0sCiAgICAidGhlbWVfY29sb3IiOiAiI2ZmZmZmZiIsCiAgICAiYmFja2dyb3VuZF9jb2xvciI6ICIjZmZmZmZmIiwKICAgICJkaXNwbGF5IjogInN0YW5kYWxvbmUiCn0K" />
+    <link
+      rel="mask-icon"
+      href="/premium-watches/assets/safari-pinned-tab-a61053c5.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
     <!-- Modern-normalize -->
-    <!-- <link
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
       integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
-    /> -->
+    />
     <!-- Сustom styles -->
     
     <script type="module" crossorigin src="/premium-watches/assets/index-5bcd1419.js"></script>
     <link rel="stylesheet" href="/premium-watches/assets/index-7f237f7c.css">
   </head>
-  
+
   <body>
     <header>
   <p>header</p>
