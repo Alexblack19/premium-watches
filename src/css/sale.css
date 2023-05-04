@@ -1,13 +1,9 @@
 /* Sale styles */
 /* 375,768,1280 */
 
-.sale-container {
-  padding-left: 20px;
-  padding-right: 20px;
-  max-width: 375px;
-}
+
 .sale-section {
-  font-family: 'Epilogue', sans-serif;
+
   font-weight: 400;
   font-style: normal;
   color: rgba(20, 20, 20, 0.5);
@@ -170,11 +166,7 @@
 /* =============TABLET ============ */
 
 @media screen and (min-width: 768px) {
-  .sale-container {
-    padding-left: 32px;
-    padding-right: 32px;
-    max-width: 768px;
-  }
+  
   .sale-section {
     padding-top: 64px;
     padding-bottom: 128px;
@@ -223,11 +215,7 @@
 /* ============DESKTOP================= */
 
 @media screen and (min-width: 1280px) {
-  .sale-container {
-    padding-left: 52px;
-    padding-right: 52px;
-    max-width: 1280px;
-  }
+ 
   .sale-section {
     padding-top: 80px;
     padding-bottom: 160px;
