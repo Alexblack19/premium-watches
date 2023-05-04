@@ -1,3 +1,79 @@
-<section>
-    <h1>Hero</h1>    
+<section class="hero-section">
+    <div class="container hero-container">
+        <h1 class="hero-title">Welcome to our collection of premium watches</h1>
+        <!-- Slider -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slide">
+                    <img srcset="../img/Slider_mob1.jpg   226w, ../img/Slider_tab1.jpg 348w"
+                        sizes="(min-width: 768px) 348px, (min-width: 320px) 226px, 100vw" src="../img/Slider_desc1.jpg"
+                        alt="Watch" />
+                </div>
+                <div class="swiper-slide">
+                    <img srcset="../img/Slider_mob2.jpg   226w, ../img/Slider_tab2.jpg 348w"
+                        sizes="(min-width: 768px) 348px, (min-width: 320px) 226px, 100vw" src="../img/Slider_desc2.jpg"
+                        alt="Watch" />
+                </div>
+                <div class="swiper-slide">
+                    <img srcset="../img/Slider_mob3.jpg   226w, ../img/Slider_tab3.jpg 348w"
+                        sizes="(min-width: 768px) 348px, (min-width: 320px) 226px, 100vw" src="../img/Slider_desc3.jpg"
+                        alt="Watch" />
+                </div>
+                <div class="swiper-slide">
+                    <img srcset="../img/Slider_mob4.jpg   226w, ../img/Slider_tab4.jpg 348w"
+                        sizes="(min-width: 768px) 348px, (min-width: 320px) 226px, 100vw" src="../img/Slider_desc4.jpg"
+                        alt="Watch" />
+                </div>
+                <div class="swiper-slide">
+                    <img srcset="../img/Slider_mob5.jpg   226w, ../img/Slider_tab5.jpg 348w"
+                        sizes="(min-width: 768px) 348px, (min-width: 320px) 226px, 100vw" src="../img/Slider_desc5.jpg"
+                        alt="Watch" />
+                </div>
+            </div>
+        </div>
+        <!-- Slider pagination -->
+        <!-- <div class="swiper-pagination"></div> -->
+        <!-- Slider buttons -->
+        <div class="swiper-buttons">
+            <button type="button" class="button-prev"><svg class="icon-prev" width="18" height="18">
+                    <use href="../img/sprite-slider.svg#icon-prev"></use>
+                </svg></button>
+            <button type="button" class="button-next"><svg class="icon-next" width="18" height="18">
+                    <use href="../img/sprite-slider.svg#icon-next"></use>
+                </svg></button>
+            <!-- Slider scrollbar -->
+            <!-- <div class="swiper-scrollbar"></div> -->
+        </div>
+        <p class="hero-text">
+            Our watches are not just timepieces, but also an expression of your
+            personality and lifestyle. From classic designs to modern ones, we have a
+            watch to suit every taste and occasion.
+        </p>
+        <div class="hero-image">
+            <picture class="hero-picture">
+                <source srcset="../img/Hero_img_desc.jpg     676w, ../img/Hero_img_desc@2x.jpg 1352w " type="image/jpeg"
+                    media="(min-width: 1280px)" sizes="(min-width: 1280px) 676px, 100vw" />
+                <source srcset="../img/Hero_img_mob.jpg 335w, ../img/Hero_img_mob@2x.jpg 670w " type="image/jpeg"
+                    media="(max-width: 767px)" sizes="(max-width: 767px) 335px, 100vw" />
+                <source srcset="../img/Hero_img_tab.jpg 704w, ../img/Hero_img_tab@2x.jpg 1408w " type="image/jpeg"
+                    media="(min-width: 768px)" sizes="(min-width: 768px) 704px, 100vw" />
+                <img src="../img/Hero_img_desc.jpg" alt="Hand watch" />
+            </picture>
+        </div>
+    </div>
 </section>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<!-- Initialize Swiper -->
+<script>
+    const swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        loop: true,
+        keyboard: { enabled: true, },
+        navigation: {
+            nextEl: ".button-next",
+            prevEl: ".button-prev",
+        },
+    });
+</script>
