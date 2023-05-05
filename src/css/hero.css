@@ -2,7 +2,7 @@
 .hero-section {
   background-color: #141414;
 }
-
+/* ===Hero container=== */
 .hero-container {
   padding-top: 40px;
   padding-bottom: 40px;
@@ -10,6 +10,9 @@
 
 @media screen and (min-width: 768px) {
   .hero-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     padding-bottom: 64px;
     padding-top: 60px;
   }
@@ -24,8 +27,9 @@
   }
 }
 
+/* ---Hero title--- */
 .hero-title {
-  max-width: 335px;
+  width: 335px;
   margin-top: 0;
   margin-bottom: 60px;
   font-weight: 600;
@@ -37,7 +41,7 @@
 
 @media screen and (min-width: 768px) {
   .hero-title {
-    max-width: 653px;
+    width: 653px;
     font-size: 60px;
     line-height: 1.03;
   }
@@ -45,24 +49,29 @@
 
 @media screen and (min-width: 1280px) {
   .hero-title {
-    order: ;
-    max-width: 750px;
-    padding-bottom: 122px;
+    order: 1;
+    width: 750px;
   }
 }
-
+/* ===Slider=== */
 .swiper {
   max-width: 266px;
   margin: 0;
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 768px) {
   .swiper {
     max-width: 436px;
-    order: ;
   }
 }
 
+@media screen and (min-width: 1280px) {
+  .swiper {
+    max-width: 436px;
+    order: 3;
+  }
+}
+/* ---Slider buttons--- */
 .swiper-buttons {
   display: flex;
   margin-top: 20px;
@@ -80,17 +89,22 @@
   border-radius: 8px;
 }
 
+@media screen and (min-width: 768px) {
+  .button-prev {
+    height: 40px;
+    width: 40px;
+  }
+}
+
 .button-icon-prev {
   fill: #8a8a8a;
 }
 
-.button-icon-next {
-  fill: #8a8a8a;
-}
-
-.button-icon-prev:focus,
-.button-icon-prev:hover {
-  fill: white;
+@media screen and (min-width: 768px) {
+  .button-icon-prev {
+    height: 20px;
+    width: 20px;
+  }
 }
 
 .button-icon-next:focus,
@@ -114,24 +128,42 @@
   border-radius: 8px;
 }
 
-.icon-next {
-  stroke: #8a8a8a;
+@media screen and (min-width: 768px) {
+  .button-next {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+.button-icon-next {
+  fill: #8a8a8a;
+}
+
+@media screen and (min-width: 768px) {
+  .button-icon-next {
+    height: 20px;
+    width: 20px;
+  }
+}
+
+.button-icon-prev:focus,
+.button-icon-prev:hover {
+  fill: white;
 }
 
 .button-next:focus,
 .button-next:hover {
   border: 1px solid #ffffff;
 }
+/* ---Slider buttons end--- */
+/* ===Slider end=== */
 
-.icon-next {
-  stroke: #8a8a8a;
-}
-
+/* ---Hero text--- */
 .hero-text {
   margin-top: 40px;
   margin-bottom: 40px;
   margin-left: auto;
-  max-width: 248px;
+  width: 248px;
   font-weight: 300;
   font-size: 14px;
   line-height: 1.29;
@@ -141,21 +173,20 @@
 
 @media screen and (min-width: 768px) {
   .hero-text {
-    min-width: 248px;
+    width: 248px;
     margin-top: 0;
-    margin-bottom: 0;
   }
 }
 
 @media screen and (min-width: 1280px) {
   .hero-text {
-    order: ;
-    top: 60px;
-    right: 0;
-    max-width: 282px;
+    order: 2;
+    width: 282px;
+    margin-bottom: 90px;
   }
 }
 
+/* ---Hero image--- */
 .hero-image {
   width: 100%;
   margin-top: 0;
@@ -166,12 +197,12 @@
 
 @media screen and (min-width: 768px) {
   .hero-image {
-    margin-top: 80px;
+    margin-top: 40px;
   }
 }
 
 @media screen and (min-width: 1280px) {
   .hero-image {
-    order: ;
+    order: 4;
   }
 }
