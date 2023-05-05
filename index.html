@@ -1,68 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Watch Spot</title>
-    <!-- Favicon -->
-    <link
-      rel="apple-touch-icon"
-      sizes="152x152"
-      href="/premium-watches/assets/apple-touch-icon-06efe703.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnBQMMCi4y470lAAAC3UlEQVRIx4XVT2hcVRTH8c99r7RNbGtMmlrGKrG0CUZMLeNK0kWwaBF3VqjiooJaCrXizoVrN7rRjUVciFbEin+ggoIaKLa2iyYVkSIRWivE0Gr/DgaCmXddzMvMvJk3eBeXufee8z3nvPO7dwJQJTFmrz1GDUoau1FozvnGTRdNO2bW8gw0zqoMeN4BW1dc/2csOOot88wIVbjLm56StixiTo9tXqEIOeGwn0krDHjbvvbYsUfgAmLEhGk30gqHvFyeepSJotB0LSDu0efbtHKfNwyXudcN2e1RA+YtlyO2OrfKXts640JmwismpJa87z313DW2IwbtTzxWln7dvV6zUypaY58H1Mu/zFRirKz2fi8Yba5u97hUzBEF0HBisAzwhEcKxpNGZKX9SVqqi7lBZtx+q3ODRh82292jvc36Qy6bzAYvqoB/XRNFUeZhgzmsFNC+/aTJ/Ncv3rWk7h8Llt1vnfX6O6xXFdtX95Bnck1HF5ywyxbBsPVedQuf+aKghUILo00O2pivrrvDmE+c16ffBluMi84U1NIErDB32egPf1u0ZNGop825Zig/vekd8/kV7yihoa9g2g8yOzzrTgP6bTJpe15S5pjTecRWEYlCSjdcccUsNrtNsNpBD+YWZ30s67zUnSUEQeKqM/lBNGQN+MsRV0tUX9BBK5vvXM7XjXnZUeeaL07PLjQwQeKCk4X9kz7X9SaVAVYwy75WazpcckRNkiOKXUi6BR4EqZ98qS6I5rzu12ak9sIgVK8bKEqjcaky6+wx7nffm5d2ObYAs3a2lrENEWWCKEh6vYrUEtPF9FfmIJFKpM3opePHxKf+7MygBQo5rLUujEUfJs76qPgB2xsaOvTRMb5xPK1E51WNlEE6e9OxP+ewS2mFmlk73N39LfRKHX7zklOkCypcNq3PNmu7IwYlzVv0lUNOMbNyVmWtKc+Zar4nbaPwZ1Jz2geOu8UM/gPMB85wTG8IXQAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMy0wNS0wM1QxMjoxMDo0NiswMDowMPnhQscAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjMtMDUtMDNUMTI6MTA6NDYrMDA6MDCIvPp7AAAAV3pUWHRSYXcgcHJvZmlsZSB0eXBlIGlwdGMAAHic4/IMCHFWKCjKT8vMSeVSAAMjCy5jCxMjE0uTFAMTIESANMNkAyOzVCDL2NTIxMzEHMQHy4BIoEouAOoXEXTyQjWVAAAAAElFTkSuQmCC"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnBQMMCi2r6uyfAAABMElEQVQoz0XQMU9UQRiF4WfmLiBxqbTZSYwBzVZKs6XGAlsTCL0WJjTG1kRDqf/BggYs7LE1sZHGWkiw0Q5JiCQW7Gp27x2LO1e+9n3P+ZITRix5asvQnMub+WHPW+dVWvLGKwNVRqMREKJrHkgOqvTMSwtdcMWKczUC0R1NlXYkyBoPvbbpt69tC9GtaNhmG7c9N7Bow3VNV5mi+TZ/1ZabxmrLRqZyMWKLs3VrZvYdu/DIY4PSUoQb1vwxtuiTBffdMy4NYZTJrujb9ETtu1U/vXCoEroGJk589lffqqk9RwUXIQh6jn0BH30oEHpmeq00tWveqV0T1X8hjL4ZkstUc2pZbGeCs+idqbJcpS5fQ7fe+yodSe6KoUjhEmf7tqs0cWBmqN/i0OFfdmw7+QdVqFXZMMd8nQAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMy0wNS0wM1QxMjoxMDo0NSswMDowMMgJWFoAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjMtMDUtMDNUMTI6MTA6NDUrMDA6MDC5VODmAAAAV3pUWHRSYXcgcHJvZmlsZSB0eXBlIGlwdGMAAHic4/IMCHFWKCjKT8vMSeVSAAMjCy5jCxMjE0uTFAMTIESANMNkAyOzVCDL2NTIxMzEHMQHy4BIoEouAOoXEXTyQjWVAAAAAElFTkSuQmCC"
-    />
-    <link rel="manifest" href="data:application/manifest+json;base64,ewogICAgIm5hbWUiOiAiIiwKICAgICJzaG9ydF9uYW1lIjogIiIsCiAgICAiaWNvbnMiOiBbCiAgICAgICAgewogICAgICAgICAgICAic3JjIjogIi9hbmRyb2lkLWNocm9tZS0xNDR4MTQ0LnBuZyIsCiAgICAgICAgICAgICJzaXplcyI6ICIxNDR4MTQ0IiwKICAgICAgICAgICAgInR5cGUiOiAiaW1hZ2UvcG5nIgogICAgICAgIH0KICAgIF0sCiAgICAidGhlbWVfY29sb3IiOiAiI2ZmZmZmZiIsCiAgICAiYmFja2dyb3VuZF9jb2xvciI6ICIjZmZmZmZmIiwKICAgICJkaXNwbGF5IjogInN0YW5kYWxvbmUiCn0K" />
-    <link
-      rel="mask-icon"
-      href="/premium-watches/assets/safari-pinned-tab-851be831.svg"
-      color="#5bbad5"
-    />
-    <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="theme-color" content="#ffffff" />
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;600&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Modern-normalize -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
-      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <!-- Slider -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
-    />
-    <!-- Сustom styles -->
-        
-    <script type="module" crossorigin src="/premium-watches/assets/index-5bcd1419.js"></script>
-    <link rel="stylesheet" href="/premium-watches/assets/index-dec0223a.css">
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Watch Spot</title>
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="152x152" href="/premium-watches/assets/apple-touch-icon-06efe703.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnBQMMCi4y470lAAAC3UlEQVRIx4XVT2hcVRTH8c99r7RNbGtMmlrGKrG0CUZMLeNK0kWwaBF3VqjiooJaCrXizoVrN7rRjUVciFbEin+ggoIaKLa2iyYVkSIRWivE0Gr/DgaCmXddzMvMvJk3eBeXufee8z3nvPO7dwJQJTFmrz1GDUoau1FozvnGTRdNO2bW8gw0zqoMeN4BW1dc/2csOOot88wIVbjLm56StixiTo9tXqEIOeGwn0krDHjbvvbYsUfgAmLEhGk30gqHvFyeepSJotB0LSDu0efbtHKfNwyXudcN2e1RA+YtlyO2OrfKXts640JmwismpJa87z313DW2IwbtTzxWln7dvV6zUypaY58H1Mu/zFRirKz2fi8Yba5u97hUzBEF0HBisAzwhEcKxpNGZKX9SVqqi7lBZtx+q3ODRh82292jvc36Qy6bzAYvqoB/XRNFUeZhgzmsFNC+/aTJ/Ncv3rWk7h8Llt1vnfX6O6xXFdtX95Bnck1HF5ywyxbBsPVedQuf+aKghUILo00O2pivrrvDmE+c16ffBluMi84U1NIErDB32egPf1u0ZNGop825Zig/vekd8/kV7yihoa9g2g8yOzzrTgP6bTJpe15S5pjTecRWEYlCSjdcccUsNrtNsNpBD+YWZ30s67zUnSUEQeKqM/lBNGQN+MsRV0tUX9BBK5vvXM7XjXnZUeeaL07PLjQwQeKCk4X9kz7X9SaVAVYwy75WazpcckRNkiOKXUi6BR4EqZ98qS6I5rzu12ak9sIgVK8bKEqjcaky6+wx7nffm5d2ObYAs3a2lrENEWWCKEh6vYrUEtPF9FfmIJFKpM3opePHxKf+7MygBQo5rLUujEUfJs76qPgB2xsaOvTRMb5xPK1E51WNlEE6e9OxP+ewS2mFmlk73N39LfRKHX7zklOkCypcNq3PNmu7IwYlzVv0lUNOMbNyVmWtKc+Zar4nbaPwZ1Jz2geOu8UM/gPMB85wTG8IXQAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMy0wNS0wM1QxMjoxMDo0NiswMDowMPnhQscAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjMtMDUtMDNUMTI6MTA6NDYrMDA6MDCIvPp7AAAAV3pUWHRSYXcgcHJvZmlsZSB0eXBlIGlwdGMAAHic4/IMCHFWKCjKT8vMSeVSAAMjCy5jCxMjE0uTFAMTIESANMNkAyOzVCDL2NTIxMzEHMQHy4BIoEouAOoXEXTyQjWVAAAAAElFTkSuQmCC" />
+  <link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnBQMMCi2r6uyfAAABMElEQVQoz0XQMU9UQRiF4WfmLiBxqbTZSYwBzVZKs6XGAlsTCL0WJjTG1kRDqf/BggYs7LE1sZHGWkiw0Q5JiCQW7Gp27x2LO1e+9n3P+ZITRix5asvQnMub+WHPW+dVWvLGKwNVRqMREKJrHkgOqvTMSwtdcMWKczUC0R1NlXYkyBoPvbbpt69tC9GtaNhmG7c9N7Bow3VNV5mi+TZ/1ZabxmrLRqZyMWKLs3VrZvYdu/DIY4PSUoQb1vwxtuiTBffdMy4NYZTJrujb9ETtu1U/vXCoEroGJk589lffqqk9RwUXIQh6jn0BH30oEHpmeq00tWveqV0T1X8hjL4ZkstUc2pZbGeCs+idqbJcpS5fQ7fe+yodSe6KoUjhEmf7tqs0cWBmqN/i0OFfdmw7+QdVqFXZMMd8nQAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMy0wNS0wM1QxMjoxMDo0NSswMDowMMgJWFoAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjMtMDUtMDNUMTI6MTA6NDUrMDA6MDC5VODmAAAAV3pUWHRSYXcgcHJvZmlsZSB0eXBlIGlwdGMAAHic4/IMCHFWKCjKT8vMSeVSAAMjCy5jCxMjE0uTFAMTIESANMNkAyOzVCDL2NTIxMzEHMQHy4BIoEouAOoXEXTyQjWVAAAAAElFTkSuQmCC" />
+  <link rel="manifest" href="data:application/manifest+json;base64,ewogICAgIm5hbWUiOiAiIiwKICAgICJzaG9ydF9uYW1lIjogIiIsCiAgICAiaWNvbnMiOiBbCiAgICAgICAgewogICAgICAgICAgICAic3JjIjogIi9hbmRyb2lkLWNocm9tZS0xNDR4MTQ0LnBuZyIsCiAgICAgICAgICAgICJzaXplcyI6ICIxNDR4MTQ0IiwKICAgICAgICAgICAgInR5cGUiOiAiaW1hZ2UvcG5nIgogICAgICAgIH0KICAgIF0sCiAgICAidGhlbWVfY29sb3IiOiAiI2ZmZmZmZiIsCiAgICAiYmFja2dyb3VuZF9jb2xvciI6ICIjZmZmZmZmIiwKICAgICJkaXNwbGF5IjogInN0YW5kYWxvbmUiCn0K" />
+  <link rel="mask-icon" href="/premium-watches/assets/safari-pinned-tab-851be831.svg" color="#5bbad5" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#ffffff" />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;600&display=swap" rel="stylesheet" />
+  <!-- Modern-normalize -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Slider -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <!-- Сustom styles -->
+  
 
-  <body>
+  <script type="module" crossorigin src="/premium-watches/assets/index-5bcd1419.js"></script>
+  <link rel="stylesheet" href="/premium-watches/assets/index-3cf5fb28.css">
+</head>
+
+<body>
+  
+  <main>
     
-    <main>
-      
-      
-      
-      <section class="new-watches">
+<section class="hero-section">
+    <div class="container hero-container">
+        <h1 class="hero-title">Welcome to our collection of premium watches</h1>
+        <!-- Slider -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slide">
+                    <picture>
+                        <source srcset="../img/Slider_desc1.jpg 1x, ../img/Slider_desc1@2x.jpg 2x"
+                            media="(min-width: 1176px)" />
+                        <source srcset="../img/Slider_tab1.jpg 1x, ../img/Slider_tab1@2x.jpg 2x"
+                            media="(min-width: 768px)" />
+                        <source srcset="../img/Slider_mob1.jpg 1x, ../img/Slider_mob1@2x.jpg 2x"
+                            media="(min-width: 320px)" />
+                        <img src="../img/Slider_desc1.jpg" alt="watch">
+                    </picture>
+                </div>
+                <div class="swiper-slide">
+                    <picture>
+                        <source srcset="../img/Slider_desc2.jpg 1x, ../img/Slider_desc2@2x.jpg 2x"
+                            media="(min-width: 1176px)" />
+                        <source srcset="../img/Slider_tab2.jpg 1x, ../img/Slider_tab2@2x.jpg 2x"
+                            media="(min-width: 768px)" />
+                        <source srcset="../img/Slider_mob2.jpg 1x, ../img/Slider_mob2@2x.jpg 2x"
+                            media="(min-width: 320px)" />
+                        <img src="../img/Slider_desc2.jpg" alt="watch">
+                    </picture>
+                </div>
+                <div class="swiper-slide">
+                    <picture>
+                        <source srcset="../img/Slider_desc3.jpg 1x, ../img/Slider_desc3@2x.jpg 2x"
+                            media="(min-width: 1176px)" />
+                        <source srcset="../img/Slider_tab3.jpg 1x, ../img/Slider_tab3@2x.jpg 2x"
+                            media="(min-width: 768px)" />
+                        <source srcset="../img/Slider_mob3.jpg 1x, ../img/Slider_mob3@2x.jpg 2x"
+                            media="(min-width: 320px)" />
+                        <img src="../img/Slider_desc3.jpg" alt="watch">
+                    </picture>
+                </div>
+                <div class="swiper-slide">
+                    <picture>
+                        <source srcset="../img/Slider_desc4.jpg 1x, ../img/Slider_desc4@2x.jpg 2x"
+                            media="(min-width: 1176px)" />
+                        <source srcset="../img/Slider_tab4.jpg 1x, ../img/Slider_tab4@2x.jpg 2x"
+                            media="(min-width: 768px)" />
+                        <source srcset="../img/Slider_mob4.jpg 1x, ../img/Slider_mob4@2x.jpg 2x"
+                            media="(min-width: 320px)" />
+                        <img src="../img/Slider_desc4.jpg" alt="watch">
+                    </picture>
+                </div>
+                <div class="swiper-slide">
+                    <picture>
+                        <source srcset="../img/Slider_desc5.jpg 1x, ../img/Slider_desc5@2x.jpg 2x"
+                            media="(min-width: 1176px)" />
+                        <source srcset="../img/Slider_tab5.jpg 1x, ../img/Slider_tab5@2x.jpg 2x"
+                            media="(min-width: 768px)" />
+                        <source srcset="../img/Slider_mob5.jpg 1x, ../img/Slider_mob5@2x.jpg 2x"
+                            media="(min-width: 320px)" />
+                        <img src="../img/Slider_desc5.jpg" alt="watch">
+                    </picture>
+                </div>
+            </div>
+            <!-- Slider buttons -->
+            <div class="swiper-navigation">
+                <div class="swiper-nav-buttons">
+                    <button type="button" class="button-prev"><svg class="button-icon-prev" width="18" height="18">
+                            <use href="../img/sprite-slider.svg#icon-prev"></use>
+                        </svg></button>
+                    <button type="button" class="button-next"><svg class="button-icon-next" width="18" height="18">
+                            <use href="../img/sprite-slider.svg#icon-next"></use>
+                        </svg></button>
+                </div>
+                <div class="swiper-nav-pagination">
+                    <p class="pagination-start">01</p>
+                    <p class="pagination-end">05</p>
+                </div>
+            </div>
+        </div>
+        <p class="hero-text">
+            Our watches are not just timepieces, but also an expression of your
+            personality and lifestyle. From classic designs to modern ones, we have a
+            watch to suit every taste and occasion.
+        </p>
+        <div class="hero-image">
+            <picture class="hero-picture">
+                <source srcset="../img/Hero_img_desc.jpg     676w, ../img/Hero_img_desc@2x.jpg 1352w " type="image/jpeg"
+                    media="(min-width: 1280px)" sizes="(min-width: 1280px) 676px, 100vw" />
+                <source srcset="../img/Hero_img_mob.jpg 335w, ../img/Hero_img_mob@2x.jpg 670w " type="image/jpeg"
+                    media="(max-width: 767px)" sizes="(max-width: 767px) 335px, 100vw" />
+                <source srcset="../img/Hero_img_tab.jpg 704w, ../img/Hero_img_tab@2x.jpg 1408w " type="image/jpeg"
+                    media="(min-width: 768px)" sizes="(min-width: 768px) 704px, 100vw" />
+                <img src="../img/Hero_img_desc.jpg" alt="Hand watch" />
+            </picture>
+        </div>
+    </div>
+</section>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<!-- Initialize Swiper -->
+<script>
+    const swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        loop: true,
+        keyboard: { enabled: true, },
+        navigation: {
+            nextEl: ".button-next",
+            prevEl: ".button-prev",
+        },
+    });
+</script>
+
+    
+    
+    <section class="new-watches">
     <div class="container">
         <h2 class="new-watches-title">New watches</h2>
         <h3 class="new-watches-subtitle">Green And Bronze—The Match Made In Heaven</h3>
@@ -111,7 +196,7 @@
         </ul>
     </div> 
 </section>
-      <section id="sale" class="sale-section container">
+    <section id="sale" class="sale-section container">
   <h2 class="sale-section-title">Sale</h2>
   <div class="sale-wrap">
     <div class="sale-gallery-wrap">
@@ -226,11 +311,12 @@
   </div>
 </section>
 
-    </main>
-    
-    <!-- Modal window -->
+  </main>
+  
+  <!-- Modal window -->
 
-    
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-  </body>
+  
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+</body>
+
 </html>
