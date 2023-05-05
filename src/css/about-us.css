@@ -4,6 +4,7 @@
   padding-bottom: 40px;
 }
 .about-title {
+  margin-bottom: 40px;
   font-style: normal;
   font-weight: 600;
   font-size: 32px;
@@ -33,12 +34,6 @@
   background-size: cover;
 }
 
-/* ----------@media---------------- */
-@media screen and (max-width: 767px) {
-  .about-title {
-    margin-bottom: 40px;
-  }
-}
 @media screen and (min-width: 768px) {
   .about .container {
     display: flex;
