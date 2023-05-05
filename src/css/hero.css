@@ -4,20 +4,20 @@
 }
 /* ===Hero container=== */
 .hero-container {
-  max-width: 375px;
-  padding-left: 20px;
-  padding-right: 20px;
+  /* max-width: 375px; */
+  /* padding-left: 20px;
+  padding-right: 20px; */
   padding-top: 40px;
   padding-bottom: 40px;
-  margin-left: auto;
-  margin-right: auto;
+  /* margin-left: auto;
+  margin-right: auto; */
 }
 
 @media screen and (min-width: 768px) {
   .hero-container {
-    max-width: 768px;
+    /* max-width: 768px;
     padding-left: 32px;
-    padding-right: 32px;
+    padding-right: 32px; */
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -28,10 +28,10 @@
 
 @media screen and (min-width: 1280px) {
   .hero-container {
-    max-width: 1176px;
-    padding-left: 0;
-    padding-right: 0;
-    padding-bottom: 80;
+    /* max-width: 1176px; */
+    /* padding-left: 0;
+    padding-right: 0; */
+    padding-bottom: 80px;
   }
 }
 
