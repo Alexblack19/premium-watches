@@ -180,6 +180,10 @@
     .menu-open-btn {
         display: none;
     }
+    .mob-logo-icon {
+        width: 19px;
+        height: 19px;
+    }
 }
 
 @media screen and (min-width: 1280px) {
