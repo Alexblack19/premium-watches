@@ -25,7 +25,7 @@
   letter-spacing: -0.02em;
   color: #141414;
 }
-.gif {
+.about-gif {
   width: 100%;
   height: 365px;
   background-image: url(../img/watchspot.gif);
@@ -35,38 +35,35 @@
 }
 
 @media screen and (min-width: 768px) {
-  .about-wrap {
-    margin-bottom: 40px;
-    display: flex;
-    /* flex-wrap: wrap; */
-  }
   .about {
     padding-top: 64px;
     padding-bottom: 64px;
+  }
+  .about-wrap {
+    margin-bottom: 40px;
+    display: flex;
   }
   .about-title {
     margin-right: 40px;
     margin-bottom: 0;
     font-size: 40px;
     line-height: calc(44 / 40);
-    
   }
   .about-text-wrap {
     margin-bottom: 0;
     flex-direction: row;
     column-gap: 20px;
+    row-gap: 0;
     width: 490px;
   }
-  .about-text:nth-child(1) {
-    /* width: 220px; */
+  .about-item:first-child {
+    width: 220px;
+    flex-shrink: 1;
+  }
+  .about-item:first-child {
     flex-shrink: 0;
   }
-.about-text:nth-child(2) {
-    width: 250px;
-    /* flex-shrink: 2; */
-  }
-
-  .gif {
+  .about-gif {
     height: 465px;
   }
 }
@@ -80,13 +77,13 @@
     margin-right: 110px;
   }
   .about-text-wrap {
+    column-gap: 40px;
     width: 859px;
-    margin-right: 33px;
   }
-  .about-text:nth-child(1) {
+  .about-item:first-child {
     width: 439px;
   }
-  .gif {
+  .about-gif {
     width: 892px;
     height: 500px;
     margin-left: auto;
