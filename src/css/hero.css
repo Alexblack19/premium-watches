@@ -12,7 +12,6 @@
   .hero-container {
     padding-bottom: 64px;
     padding-top: 60px;
-    position: relative;
   }
 }
 
@@ -46,36 +45,27 @@
 
 @media screen and (min-width: 1280px) {
   .hero-title {
-    order: 1;
+    order: ;
     max-width: 750px;
     padding-bottom: 122px;
   }
 }
 
 .swiper {
-  position: relative;
-  margin: 0%;
-  margin-bottom: 20px;
+  max-width: 266px;
+  margin: 0;
 }
-
-/* .img {
-  height: 200px;
-} */
 
 @media screen and (min-width: 1280px) {
   .swiper {
     max-width: 436px;
-    order: 3;
+    order: ;
   }
 }
 
-.swiper-slide {
-  height: 200px;
-}
-
 .swiper-buttons {
-  position: absolute;
   display: flex;
+  margin-top: 20px;
   gap: 12px;
 }
 
@@ -90,8 +80,22 @@
   border-radius: 8px;
 }
 
-.icon-prev {
-  stroke: #8a8a8a;
+.button-icon-prev {
+  fill: #8a8a8a;
+}
+
+.button-icon-next {
+  fill: #8a8a8a;
+}
+
+.button-icon-prev:focus,
+.button-icon-prev:hover {
+  fill: white;
+}
+
+.button-icon-next:focus,
+.button-icon-next:hover {
+  fill: #ffffff;
 }
 
 .button-prev:focus,
@@ -124,7 +128,7 @@
 }
 
 .hero-text {
-  margin-top: 80px;
+  margin-top: 40px;
   margin-bottom: 40px;
   margin-left: auto;
   max-width: 248px;
@@ -137,11 +141,7 @@
 
 @media screen and (min-width: 768px) {
   .hero-text {
-    position: absolute;
-    top: 34%;
-    right: 15px;
     min-width: 248px;
-    z-index: 4;
     margin-top: 0;
     margin-bottom: 0;
   }
@@ -149,7 +149,7 @@
 
 @media screen and (min-width: 1280px) {
   .hero-text {
-    order: 2;
+    order: ;
     top: 60px;
     right: 0;
     max-width: 282px;
@@ -172,6 +172,6 @@
 
 @media screen and (min-width: 1280px) {
   .hero-image {
-    order: 4;
+    order: ;
   }
 }
