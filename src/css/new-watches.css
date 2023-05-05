@@ -27,8 +27,17 @@
 }
 
 .new-watches-list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
+@media screen and (min-width: 768px) {
+  .new-watches-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+}
