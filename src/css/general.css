@@ -1,6 +1,6 @@
 body {
   font-family: 'Epilogue', sans-serif;
-  background-color: #FBFBFB;  
+  background-color: #fbfbfb;
 }
 
 .visually-hidden {
@@ -44,4 +44,3 @@ body {
     max-width: 1280px;
   }
 }
-
