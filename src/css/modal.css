@@ -321,13 +321,15 @@ line-height: 1.29;
     @media screen and (min-width: 1280px) {
     
         .modal {
-          display: flex;
-          gap:20px;
+          
+          gap: 40px;
+          width: 904px;
         
-          max-width: none;
-          width: 744px;
-        padding: 40px;
         }
+
+        .modal-form {
+            width: 508px;
+           }
 
     }
 
