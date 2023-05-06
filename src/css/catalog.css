@@ -124,13 +124,13 @@
 }
 
 .catalog-btn {
-  display: block;
-  padding: 14px 28px;
-  margin-right: 0;
+  display: inline-block;
+  padding: 14px;
+  /* margin-right: 0; */
   margin-left: auto;
 
-  /* width: 108px;
-  height: 42px; */
+  min-width: 108px;
+  height: 42px;
 
   font-weight: 400;
   font-size: 12px;
