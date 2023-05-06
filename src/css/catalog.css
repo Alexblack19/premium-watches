@@ -25,6 +25,7 @@
 .catalog-card {
     max-width: 335px;
     perspective: 1000px;
+
 }
 
 .catalog-card:nth-child(n+9) {
@@ -112,6 +113,9 @@
     color: #141414;
 
     margin-bottom: 4px;
+    white-space: nowrap;
+        overflow: hidden;
+            text-overflow: ellipsis;
 }
 
 .catalog-card-prise {
