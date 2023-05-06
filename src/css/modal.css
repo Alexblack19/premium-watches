@@ -73,7 +73,7 @@
 .modal-close-icon {
   width: 10px;
   height: 10px;
-  fill: #141414;
+  stroke: #141414;
   padding-top: 0;
   padding-bottom: 0;
   /* transition: fill var(--transition-duration-funktion); */
