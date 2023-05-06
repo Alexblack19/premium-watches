@@ -128,11 +128,15 @@
   padding: 14px 28px;
   margin-right: 0;
   margin-left: auto;
-  
+
+  /* width: 108px;
+  height: 42px; */
+
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.17;
+  line-height: calc(14 / 12);
   text-align: center;
+  text-transform: uppercase;
 
   background-color: var(--brand-color);
   color: #ffffff;
