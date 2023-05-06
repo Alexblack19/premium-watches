@@ -61,9 +61,7 @@
   width: 12px;
   height: 12px;
 
-  /* тимчасово, замінити на прозорий */
-  background-color: gray;
-  /* ------------------------------- */
+  background-color: transparent;
 
   border: transparent;
   cursor: pointer;
@@ -71,18 +69,21 @@
 }
 
 .modal-close-icon {
+ 
   width: 10px;
   height: 10px;
   stroke: #141414;
   padding-top: 0;
   padding-bottom: 0;
-  /* transition: fill var(--transition-duration-funktion); */
+
+  scale: 1;
+   transition: scale var(--transition-duration-funktion);
 }
 
-/* .modal-close-button:hover .modal-close-icon,
+.modal-close-button:hover .modal-close-icon,
   .modal-close-button:focus .modal-close-icon {
-     fill: #ffffff;
-  } */
+    scale:1.5;
+  }
 
 .modal-card {
   max-width: 276px;
@@ -252,6 +253,11 @@
 
     width: 24px;
     height: 24px;
+  }
+
+  .modal-close-icon {
+    width: 12px;
+    height: 12px;
   }
 
   .modal-card {
