@@ -1,1 +1,228 @@
 /* Modal window styles */
+
+/* ----тимчасова кнопка==== */
+
+.modal-catalog-btn {
+    display: block;
+    padding: 14px 28px;
+    margin-right: 0;
+    margin-left: auto;
+    background-color: var(--brand-color);
+    color: #141414;
+    border-radius: 8px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    text-align: center;
+    border: 1px solid var(--brand-color);
+  }
+  
+  .catalog-btn:hover, .catalog-btn:focus {
+    border: 1px solid #FFFFFF;}
+/* =============================   */
+
+.backdrop {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(46, 47, 66, 0.4);
+    z-index: 100;
+    opacity: 1;
+    transform: scale(1);
+    transition: opasity var(--transition-duration-funktion),
+      visibility var(--transition-duration-funktion), transform 500ms linear 100ms;
+  }
+  
+  .backdrop.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    scale: 0;
+  }
+
+  .modal {
+    position: absolute;
+    z-index: 9999;
+    top: 50%;
+   left: 50%; 
+  
+    transform: translate(-50%, -50%) scale(1);
+
+    font-family: 'Epilogue', sans-serif;
+    font-style: normal;
+    
+
+    max-width: 335px;
+    width: 90vw;
+  
+    background-color:  #FFFFFF;
+    opacity: 1;
+    transition: opacity 600ms cubic-bezier(0.4, 0, 0.2, 1) 50ms,
+      transform 600ms cubic-bezier(0.4, 0, 0.2, 1) 50ms;
+    padding: 40px 20px 40px 20px;
+  }
+  
+  .backdrop.is-hidden .modal {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+
+  .modal-close-button {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 12px;
+    height: 12px;
+
+    /* замінити на прозорий */
+    background-color:gray;
+   
+    border: transparent ;
+    cursor: pointer;
+    padding: 0px;
+  
+    /* transition: background-color var(--transition-duration-funktion) border
+      var(--transition-duration-funktion); */
+  }
+  
+  .modal-close-icon {
+
+    width: 10px;
+    height:10px;
+   fill: #141414;
+    padding-top: 0;
+    padding-bottom: 0;
+    /* transition: fill var(--transition-duration-funktion); */
+  }
+  
+  .modal-close-button:hover,
+  .modal-close-button:focus {
+    /* background-color: var(--nav-accent-color);
+    border: 0.1em solid transparent; */
+  }
+  
+  .modal-close-button:hover .modal-close-icon,
+  .modal-close-button:focus .modal-close-icon {
+    /* fill: #ffffff; */
+  }
+
+
+  .modal-card {
+    max-width: 276px;
+    margin-bottom: 40px;
+    
+  }
+  .modal-photo {
+    height: 325px;
+    margin-bottom: 14px ;
+  }
+.modal-card-name {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.29;
+    letter-spacing: -0.02em;
+    color: #141414;
+
+    margin-bottom: 4px;
+}
+
+.modal-card-prise {
+font-weight: 400;
+font-size: 12px;
+line-height: 1.17;
+letter-spacing: -0.02em;
+color: rgba(20, 20, 20, 0.5);
+}
+
+
+
+  
+  
+  @media screen and (min-width: 768px) {
+    
+  .modal {
+  
+    max-width: none;
+    width: 744px;
+  
+  }
+  }
+
+
+  /* =============MODAL FORM============= */
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+   
+  }
+  
+  .modal-field-desk {
+    display: block;
+  
+font-size: 12px;
+line-height: 1.17;
+letter-spacing: -0.02em;
+color: #141414;
+  
+    margin-bottom: 12px;
+  }
+
+  .modal-field-input {
+    display: block;
+    width: 100%;
+    height: 42px;
+    font-size: 14px;
+    line-height: 1.29;
+    letter-spacing: -0.02em;
+    
+    color: rgba(20, 20, 20, 0.5);
+  
+    border: 1px solid rgba(20, 20, 20, 0.5);
+    border-radius: 8px;
+    padding: 12px 16px;
+
+  }
+
+  .modal-field:not(:last-child) {
+    margin-bottom: 18px;
+  }
+
+
+  .modal-field-input:focus {
+    outline: none;
+    border-color: #1E2827;
+  }
+
+  .modal-field-comment {
+    display: block;
+    width: 100%;
+    height: 196px;
+    resize: none;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.29; 
+    letter-spacing: -0.02em;
+
+    color: rgba(20, 20, 20, 0.5);
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+  }
+  
+  .modal-field-comment:focus {
+    outline: none;
+    border-color: var(--accent-color);
+  }
+  
+  .modal-field-comment::placeholder {
+    color: rgba(46, 47, 66, 0.4);
+  }
