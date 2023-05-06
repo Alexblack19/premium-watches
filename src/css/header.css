@@ -95,7 +95,7 @@
   align-items: center;
   background-color: transparent;
   border: none;
-  padding: 0; /* я */
+  padding: 0;
   line-height: 0;
 }
 
@@ -183,6 +183,7 @@
 
     transition: border var(--transition-duration-function);
   }
+
   .header-phone:hover,
   .header-phone:focus {
     border: 1px solid #ffffff;
