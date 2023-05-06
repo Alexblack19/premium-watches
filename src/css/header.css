@@ -177,8 +177,8 @@
     .header-phone {
         display: inline-block;
         padding: 18px 35px;
-        
-        border: transparent;
+        border: 1px solid transparent;
+        /* border: transparent; */
         border-radius: 8px;
         background-color: #1E2827;
         color: white;
