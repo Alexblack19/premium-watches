@@ -1,1 +1,233 @@
 /* Catalog styles */
+:root {
+    --brand-color: #1E2827
+}
+
+.catalog {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.catalog-title {
+    color: var(--brand-color);
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+
+    margin-bottom: 40px;
+}
+
+.catalog-list {
+    margin-bottom: 40px;
+}
+
+.catalog-card {
+    max-width: 335px;
+    perspective: 1000px;
+
+}
+
+.catalog-card:nth-child(n+9) {
+    display: none;
+}
+
+.catalog-card:nth-child(-n+7) {
+    margin-bottom: 40px;
+}
+
+.catalog-card-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.catalog-wrap {
+    position: relative;
+    width: 100%;
+    height: 360px;
+    margin-bottom: 14px;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.catalog-card-front {
+    padding: 43px 30px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.catalog-card:hover .catalog-wrap {
+    transform: rotateY(180deg);
+}
+
+.catalog-like {
+    display: none;
+    position: absolute;
+    top: 14px;
+    right: 14px;
+}
+
+.catalog-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+
+    background: var(--brand-color);
+    border-radius: 8px;
+}
+
+
+.catalog-card-back-point {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.29;
+    letter-spacing: -0.02em;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+.catalog-card-back-text {
+    font-size: 14px;
+    line-height: 1.29;
+    letter-spacing: -0.01em;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.catalog-card-back-text:not(:last-child) {
+    margin-bottom: 14px;
+}
+
+.catalog-card-name {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.29;
+    letter-spacing: -0.02em;
+    color: #141414;
+
+    margin-bottom: 4px;
+    white-space: nowrap;
+        overflow: hidden;
+            text-overflow: ellipsis;
+}
+
+.catalog-card-prise {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: -0.02em;
+    color: rgba(20, 20, 20, 0.5);
+}
+
+
+
+.catalog-btn {
+    display: block;
+    padding: 14px 28px;
+    margin-right: 0;
+    margin-left: auto;
+    background-color: var(--brand-color);
+    color: #FFFFFF;
+    border-radius: 8px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    text-align: center;
+    border: 1px solid var(--brand-color);
+}
+
+.catalog-btn:hover,
+.catalog-btn:focus {
+    border: 1px solid #FFFFFF;
+}
+
+
+
+
+/*------------------TABLET---------------------*/
+@media screen and (min-width: 768px) {
+
+    .catalog {
+        padding-top: 64px;
+        padding-bottom: 64px;
+    }
+
+    .catalog-title {
+        font-size: 40px;
+        line-height: 1.1;
+    }
+
+    .catalog-list {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 40px;
+        column-gap: 32px;
+        margin-bottom: 80px;
+    }
+
+    .catalog-card {
+        width: calc((100% - 32px) / 2);
+    }
+
+    .catalog-card:nth-child(-n+7) {
+        margin-bottom: 0;
+    }
+
+    .catalog-btn {
+        padding: 18px 35px;
+    }
+
+}
+
+@media screen and (min-width:768px) and (max-width:1279px) {
+    .catalog-like {
+        display: block;
+    }
+}
+
+/*------------------TABLET---------------------*/
+
+
+/*------------------DESKTOP---------------------*/
+@media screen and (min-width: 1280px) {
+    .catalog {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .catalog-card:nth-child(n+9) {
+        display: block;
+    }
+
+    .catalog-list {
+        row-gap: 64px;
+        column-gap: 24px;
+    }
+
+    .catalog-wrap {
+        height: 325px;
+    }
+
+    .catalog-card {
+        width: calc((100% - 72px) /4);
+    }
+
+    .catalog-card-front {
+        padding: 25px 0px;
+    }
+
+    .catalog-card-back {
+        padding: 20px;
+    }
+
+
+}
+
+
+/*------------------DESKTOP---------------------*/
