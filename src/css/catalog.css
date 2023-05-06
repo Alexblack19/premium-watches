@@ -124,7 +124,7 @@
 }
 
 .catalog-btn {
-  display: inline-block;
+  display: block;
   padding: 14px;
   /* margin-right: 0; */
   margin-left: auto;
