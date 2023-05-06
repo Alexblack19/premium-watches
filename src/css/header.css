@@ -103,8 +103,11 @@
   fill: #ffffff;
 }
 
-.menu-close-btn {  
+.menu-close-btn {
+  padding: 0;
   display: inline-flex;
+  justify-content: center;
+  align-items: center;
 
   width: 24px;
   height: 24px;
