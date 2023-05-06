@@ -126,7 +126,6 @@
 .catalog-btn {
   display: block;
   padding: 14px;
-  /* margin-right: 0; */
   margin-left: auto;
 
   min-width: 108px;
@@ -180,7 +179,9 @@
   }
 
   .catalog-btn {
-    padding: 18px 35px;
+    padding: 18px;
+    min-width: 122px;
+    height: 50px;
   }
 }
 
