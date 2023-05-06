@@ -1,22 +1,20 @@
 /* Header styles */
 .header {
-  /* height: 82px; */
-  padding-top: 29px; /* я */
-  padding-bottom: 29px; /* я */
+  padding-top: 29px;
+  padding-bottom: 29px;
   background-color: #141414;
 }
 
 .header-container {
-  /* height: 100%; */ /* я */
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 .mob-menu-head {
+  margin-bottom: 200px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* margin-bottom: 200px; */ /* я */
 }
 
 .logo {
@@ -25,6 +23,7 @@
   font-size: 12px;
   line-height: calc(12 / 12);
   letter-spacing: -0.03em;
+
   color: #ffffff;
   text-transform: lowercase;
 }
@@ -60,7 +59,8 @@
   width: 100%;
   height: 100%;
   background-color: #1e2827;
-  padding: 29px 20px;
+  padding-top: 29px;
+  padding-bottom: 29px;
   z-index: 2;
 
   display: flex;
@@ -90,9 +90,13 @@
 }
 
 .menu-open-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: transparent;
   border: none;
-  padding: 0; /* я */  
+  padding: 0; /* я */
+  line-height: 0;
 }
 
 .menu-open-icon {
@@ -119,7 +123,7 @@
   text-align: center;
 }
 
-.mob-menu-item {
+.mob-menu-item:not(:last-child) {
   margin-bottom: 14px;
 }
 
@@ -135,6 +139,11 @@
 }
 
 @media screen and (min-width: 768px) {
+  .header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
   .header-list {
     display: flex;
     gap: 40px;
@@ -156,9 +165,11 @@
 
   .header-phone {
     display: inline-block;
-    padding: 18px 35px;
+    min-width: 159px;
+    height: 48px;
+    padding: 18px;
     border: 1px solid transparent;
-    
+
     border-radius: 8px;
     background-color: #1e2827;
     color: white;
@@ -169,6 +180,8 @@
     line-height: calc(12 / 9);
     text-align: center;
     text-transform: uppercase;
+
+    transition: border var(--transition-duration-function);
   }
   .header-phone:hover,
   .header-phone:focus {
