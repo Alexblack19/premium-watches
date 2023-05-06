@@ -128,14 +128,18 @@
   padding: 14px 28px;
   margin-right: 0;
   margin-left: auto;
-  background-color: var(--brand-color);
-  color: #ffffff;
-  border-radius: 8px;
+  
   font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
   text-align: center;
+
+  background-color: var(--brand-color);
+  color: #ffffff;
+
   border: 1px solid var(--brand-color);
+  border-radius: 8px;
+  transition: border var(--transition-duration-function);
 }
 
 .catalog-btn:hover,
