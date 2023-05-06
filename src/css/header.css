@@ -1,13 +1,13 @@
 /* Header styles */
 .header {
   /* height: 82px; */
-  padding-top: 29px;
-  padding-bottom: 29px;
+  padding-top: 29px; /* я */
+  padding-bottom: 29px; /* я */
   background-color: #141414;
 }
 
 .header-container {
-  /* height: 100%; */
+  /* height: 100%; */ /* я */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -16,14 +16,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 200px;
+  /* margin-bottom: 200px; */ /* я */
 }
 
 .logo {
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
-  line-height: 12px;
+  line-height: calc(12 / 12);
   letter-spacing: -0.03em;
   color: #ffffff;
   text-transform: lowercase;
@@ -92,6 +92,7 @@
 .menu-open-btn {
   background-color: transparent;
   border: none;
+  padding: 0; /* я */  
 }
 
 .menu-open-icon {
@@ -127,7 +128,7 @@
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 18px;
+  line-height: calc(18 / 14);
   letter-spacing: -0.02em;
   text-transform: uppercase;
   color: #ffffff;
@@ -147,7 +148,7 @@
     font-style: normal;
     font-weight: 400;
     font-size: 9px;
-    line-height: 12px;
+    line-height: calc(12 / 9);
     text-align: center;
     text-transform: uppercase;
     color: #ffffff;
@@ -157,7 +158,7 @@
     display: inline-block;
     padding: 18px 35px;
     border: 1px solid transparent;
-    /* border: transparent; */
+    
     border-radius: 8px;
     background-color: #1e2827;
     color: white;
@@ -165,7 +166,7 @@
     font-style: normal;
     font-weight: 400;
     font-size: 9px;
-    line-height: 12px;
+    line-height: calc(12 / 9);
     text-align: center;
     text-transform: uppercase;
   }
@@ -189,7 +190,7 @@
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
-    line-height: 15px;
+    line-height: calc(15 / 15);
     letter-spacing: -0.03em;
     color: #ffffff;
     text-transform: lowercase;
