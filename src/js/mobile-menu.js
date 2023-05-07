@@ -3,7 +3,9 @@
   const openMenuBtn = document.querySelector('.js-open-menu');
   const closeMenuBtn = document.querySelector('.js-close-menu');
   // =================================================================
-  const closeMenuLink = document.querySelector('.js-close-menu-link');
+  const closeMenuAbout = document.querySelector('.js-close-menu-about');
+  const closeMenuCatalog = document.querySelector('.js-close-menu-catalog');
+  const closeMenuSale = document.querySelector('.js-close-menu-sale');
   // =================================================================
 
   const toggleMenu = () => {
@@ -21,7 +23,9 @@
   openMenuBtn.addEventListener('click', toggleMenu);
   closeMenuBtn.addEventListener('click', toggleMenu);
   // ================================================
-  closeMenuLink.addEventListener('click', toggleMenu);
+  closeMenuAbout.addEventListener('click', toggleMenu);
+  closeMenuCatalog.addEventListener('click', toggleMenu);
+  closeMenuSale.addEventListener('click', toggleMenu);
   // ================================================
 
   // Close the mobile menu on wider screens if the device orientation changes
