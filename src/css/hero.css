@@ -161,14 +161,9 @@
   }
 }
 
-.button-icon-next:focus,
-.button-icon-next:hover {
-  fill: #ffffff;
-}
-
 .button-prev:focus,
 .button-prev:hover {
-  border: 1px solid #ffffff;
+  border: 1px solid #ffffff;  
 }
 
 .button-next {
