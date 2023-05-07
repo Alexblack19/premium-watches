@@ -1,7 +1,4 @@
 /* Modal window styles */
-
-
-
 .backdrop {
   position: fixed;
   left: 0;
@@ -13,8 +10,8 @@
   z-index: 100;
   opacity: 1;
   transform: scale(1);
-  transition: opasity var(--transition-duration-funktion),
-    visibility var(--transition-duration-funktion), transform 500ms linear 100ms;
+  transition: opasity var(--transition-duration-function),
+    visibility var(--transition-duration-function), transform 500ms linear 100ms;
 }
 
 .backdrop.is-hidden {
@@ -69,7 +66,6 @@
 }
 
 .modal-close-icon {
- 
   width: 10px;
   height: 10px;
   stroke: #141414;
@@ -77,13 +73,13 @@
   padding-bottom: 0;
 
   scale: 1;
-   transition: scale var(--transition-duration-funktion);
+  transition: scale var(--transition-duration-function);
 }
 
 .modal-close-button:hover .modal-close-icon,
-  .modal-close-button:focus .modal-close-icon {
-    scale:1.5;
-  }
+.modal-close-button:focus .modal-close-icon {
+  scale: 1.5;
+}
 
 .modal-card {
   max-width: 276px;
@@ -141,29 +137,27 @@
   border: 1px solid rgba(20, 20, 20, 0.5);
   outline: none;
   border-radius: 8px;
-  padding: 12px 16px;}
+  padding: 12px 16px;
+}
 
-  .modal-field-input:focus {
-    outline: none;
-    border-color: #1e2827;
-  }
-  
- 
-  .modal-field-input:not(:focus):not(:hover):not(:active):invalid {
-    border-color: red;
-  }
-  .modal-field-input:not(:focus):not(:hover):not(:active):placeholder-shown {
-    border-color: rgba(20, 20, 20, 0.5);
-  }
+.modal-field-input:focus {
+  outline: none;
+  border-color: #1e2827;
+}
+
+.modal-field-input:not(:focus):not(:hover):not(:active):invalid {
+  border-color: red;
+}
+.modal-field-input:not(:focus):not(:hover):not(:active):placeholder-shown {
+  border-color: rgba(20, 20, 20, 0.5);
+}
 .modal-field-input::placeholder {
   color: rgba(20, 20, 20, 0.5);
 }
- 
+
 .modal-field:not(:last-child) {
   margin-bottom: 18px;
 }
-
-
 
 .modal-field-comment {
   display: block;
@@ -207,7 +201,7 @@
   border-radius: 8px;
   cursor: pointer;
   border: 1px solid transparent;
-  transition: border var(--transition-duration-funktion);
+  transition: border var(--transition-duration-function);
 
   margin-bottom: 12px;
 }
