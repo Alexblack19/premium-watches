@@ -89,6 +89,7 @@
   margin-bottom: 14px;
 }
 .modal-card-name {
+  font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.29;
@@ -96,9 +97,14 @@
   color: #141414;
 
   margin-bottom: 4px;
+  white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
 }
 
 .modal-card-prise {
+  font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
@@ -116,7 +122,7 @@
 
 .modal-field-desk {
   display: block;
-
+  font-style: normal;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: -0.02em;
@@ -186,6 +192,7 @@
   align-self: center;
   padding: 18px;
   width: 100%;
+  font-style: normal;
 
   font-family: inherit;  
   font-weight: 400;
