@@ -2,8 +2,6 @@
 .new-watches {
   padding-top: 40px;
   padding-bottom: 40px;
-
-  background-color: #FFFFFF;
 }
 
 .new-watches-title {
@@ -57,6 +55,8 @@
   .new-watches {
     padding-top: 80px;
     padding-bottom: 80px;
+
+    background-color: #FFFFFF;
   }
   .new-watches-subtitle {
     margin-bottom: 80px;
