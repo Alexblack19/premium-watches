@@ -108,6 +108,11 @@
     padding-top: 80px;
   }
 
+  .footer-logo {
+    width: 50px;
+    height: 50px;
+  }
+
   .footer-address {
     margin-bottom: 0;
   }
