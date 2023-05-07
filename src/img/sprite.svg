@@ -41,5 +41,10 @@
       <path fill="#fff" style="fill: var(--color2, #fff)" d="M20.622 28.691l10.476-15.142-10.476-0.112-7.573 15.255c-0.532 1.561-2.195 0.65-2.96 0 3.271 5.993 8.385 2.497 10.533 0z"></path>
     </symbol>
 
+    <symbol id="modal-close-icon" viewBox="0 0 32 32">
+      <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="1.7333" d="M24 8l-16 16"></path>
+      <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="1.7333" d="M8 8l16 16"></path>
+    </symbol>
+
   </defs>
 </svg>
