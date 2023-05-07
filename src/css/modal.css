@@ -188,8 +188,7 @@
   padding: 18px;
   width: 100%;
 
-  font-family: 'Epilogue', sans-serif;
-  font-style: normal;
+  font-family: inherit;  
   font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
