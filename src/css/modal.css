@@ -27,7 +27,7 @@
   top: 50%;
   left: 50%;
 
-  transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -25%) scale(1);
 
   /* font-family: 'Epilogue', sans-serif;
   font-style: normal; */
@@ -238,6 +238,8 @@
     max-width: none;
     width: 744px;
     padding: 40px;
+
+    transform: translate(-50%, -40%) scale(1);
   }
 
   .modal-close-button {
@@ -280,6 +282,7 @@
   .modal {
     gap: 40px;
     width: 904px;
+    transform: translate(-50%, -50%) scale(1);
   }
 
   .modal-form {
