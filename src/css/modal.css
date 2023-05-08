@@ -247,7 +247,8 @@
     width: 744px;
     padding: 40px;
 
-    transform: translate(-50%, -40%) scale(1);
+    /* transform: translate(-50%, -40%) scale(1); */
+    transform: translate(-50%, 0%) scale(1);
   }
 
   .modal-close-button {
@@ -290,7 +291,8 @@
   .modal {
     gap: 40px;
     width: 904px;
-    transform: translate(-50%, -50%) scale(1);
+    /* transform: translate(-50%, -50%) scale(1); */
+    transform: translate(-50%, 0%) scale(1);
   }
 
   .modal-form {
