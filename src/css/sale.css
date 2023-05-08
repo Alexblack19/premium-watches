@@ -86,7 +86,7 @@
   align-items: baseline;
   gap: 8px;
 
-  margin-bottom: 40px;
+  margin-bottom: 48px;
 }
 
 .sale-new-price {
@@ -107,24 +107,23 @@
 
 .sale-discription-subtitle {
   position: relative;
+
+  margin-top: 8px;
+  margin-bottom: 17px;  
+
   display: flex;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.33;
   letter-spacing: -0.02em;
   text-transform: uppercase;
-  color: #141414;
-
-  /* margin-bottom: 9px; */
-  margin-bottom: 17px;
-  /* padding-top: 8px;
-  padding-bottom: 8px; */
+  color: #141414;  
 }
 
 .sale-discription-subtitle::after {
   content: '';
   position: absolute;
-  top: 0;
+  top: -8px;  
   display: block;
   width: 100%;
   height: 1px;
@@ -148,7 +147,7 @@
   line-height: 1.29;
   letter-spacing: -0.01em;
 
-  margin-bottom: 40px;
+  margin-bottom: 48px;
 }
 
 .sale-feature-list {
@@ -236,6 +235,6 @@
   }
 
   .sale-discription-text {
-    margin-bottom: 20px;
+    margin-bottom: 28px;
   }
 }
