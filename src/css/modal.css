@@ -88,7 +88,7 @@
   max-width: 276px;
   margin-bottom: 40px;
 }
-.modal-photo {  
+.modal-photo {
   margin-bottom: 14px;
 }
 .modal-card-name {
@@ -101,9 +101,8 @@
 
   margin-bottom: 4px;
   white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .modal-card-prise {
@@ -197,7 +196,7 @@
   width: 100%;
   font-style: normal;
 
-  font-family: inherit;  
+  font-family: inherit;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
