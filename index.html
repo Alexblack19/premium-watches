@@ -1,36 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Watch Spot</title>
-  <!-- Favicon -->   
-  <link rel="apple-touch-icon" sizes="180x180" href="/premium-watches/assets/apple-touch-icon-eaa7f761.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnBQcGHRx9QnqyAAADMUlEQVRIx33V3YtVZRQG8N+7zznjx+hI5Rcj2sRM0YjoiAOJFkRCqKCCWEEEkVR201WEXUVE/0E3jqSBECjeCJWF3WiFlGCUkuJn6iiiOIo0TDPjPvvtYs457b2Ptm42rLWeZ32/O7BKJun1li36TJeTKJMJEkH4Tz3hsq/tXXx+OJ4UBtST2kafWZ73gUynPouNO+Nm2Rid9fGDQ0m9mkg2+sKCsj14zhsGdMpctdsPIjSJgqWGakk8WOnutUvfFKQJpuo1Oz2jQ5B4zCqXXWl5NL4zLUuOVro/8IpQhPOq981uaaKZFvnJWJliXkgTW/LlRWRW2m5GqR/91spyflOBbEr0FuHRE94zt+AaUbPeLG2yJGmGanImXjdYaujUQJcbUC/pVZIiYd0a23I1xVYGUaf1OtpSKBBkuu0wpy1+aOSwWl+uDzmCRkN0eNOyErw5nyCaa115ofIZZF6yuWC8YURodSfzjwHzWuFKBJke75iZM6W+dKQRMTNuxDWpPqm6unqjmOpUepkZ3s5PFFf86JwNukwaNSGVCp6XSGWiMRelUwRRtNHLBXjmqm5/Om6tEaN6zBFFg7Y1itjnfDODTL/tpRHd9bcXXHLIfKO6zG6ddAX87qC6RELU5V2LSt2/7XGDVjvtuNsWNGBNuWeXWwKSKNhkjVQqlclE0ZhosR5bVf2sZmGpvP1ONCirVJz2IRKJQf1m6FS1wCzTrDTopB61AsEvDrT2oxrUnWrMOjPiKZ06zDZdguk2mGZpAX7LLvdaJVXzyxD9ZdISNUlr49boL5z2A/ucynWkcAvBfSdMU8ktbJcnC/GPOlRY59I1BscMe7Rcs9vo/xEkbjj6SPi4PS6UBpqUnTJH3HsEwXe+f8g1jpcV5/z6UPh5e020/TwSl8tdmHC4zIpRQ661Jzyc+KZ04Cp+80fJL3XAsXY4hyvd171ofjGHcXeszr0NY76yx2Rb/eFC+Kiy8E64bV3hJRHccNPT5ggmnPG5gw+Bux921o+EFeqV2tbwqWfztihaZIVZrjvrbm4zW3IpfpLuT9LAKh1hst8Omy0pvpFZYy6l2qNh3xoKp2I86V+MEw1Pkis+RQAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMy0wNS0wN1QwNjoyOToyOCswMDowMIPBurEAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjMtMDUtMDdUMDY6Mjk6MjgrMDA6MDDynAINAAAAV3pUWHRSYXcgcHJvZmlsZSB0eXBlIGlwdGMAAHic4/IMCHFWKCjKT8vMSeVSAAMjCy5jCxMjE0uTFAMTIESANMNkAyOzVCDL2NTIxMzEHMQHy4BIoEouAOoXEXTyQjWVAAAAAElFTkSuQmCC">
-  <link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnBQcGHRvjJu8RAAABU0lEQVQozzXQz4vMcQDG8dfn852ZJqtVy8oMs37UaK0U5UJIjgq1ctEWKbVnJS5Obps/YGvbEomDclUkJcphy3ljzYbS9pUabVa78/k4fHluT+/34ekJR+phyi1dkaxjuyU/BZJPZvKDon3FPR0hq7vopknjPvglBFudCmXReqyTkU26YZuG3Ta8B6FpIupCctA1TSTZGbskYF9UkG0xbQeyLGk7DTIhkgWXHEPSlxGcMGwgI5IcdVmB0py+NaWm48btUYjZqGkjYMWiF5ZtdsAdc84iRhfs99uGNQ3nPLdqk7ohXz2zrha98k7HlLYxOy1qgb5Z39TUBpYkPecdQnbdELKn3iqqkVHNqtcSgmEFFjwyALF6JHij539+mFWKkKOPlffdy3943UMLiqr0itYfJzXJvhgzasV9TwwE6Ie74XAjXnXbXpIRXaXPcoWXzeT5vwbgarUaajd5AAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIzLTA1LTA3VDA2OjI5OjI3KzAwOjAwdYnKWAAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMy0wNS0wN1QwNjoyOToyNyswMDowMATUcuQAAABXelRYdFJhdyBwcm9maWxlIHR5cGUgaXB0YwAAeJzj8gwIcVYoKMpPy8xJ5VIAAyMLLmMLEyMTS5MUAxMgRIA0w2QDI7NUIMvY1MjEzMQcxAfLgEigSi4A6hcRdPJCNZUAAAAASUVORK5CYII=">
-  <link rel="manifest" href="data:application/manifest+json;base64,ewogICAgIm5hbWUiOiAiIiwKICAgICJzaG9ydF9uYW1lIjogIiIsCiAgICAiaWNvbnMiOiBbCiAgICAgICAgewogICAgICAgICAgICAic3JjIjogIi9hbmRyb2lkLWNocm9tZS0xOTJ4MTkyLnBuZyIsCiAgICAgICAgICAgICJzaXplcyI6ICIxOTJ4MTkyIiwKICAgICAgICAgICAgInR5cGUiOiAiaW1hZ2UvcG5nIgogICAgICAgIH0sCiAgICAgICAgewogICAgICAgICAgICAic3JjIjogIi9hbmRyb2lkLWNocm9tZS01MTJ4NTEyLnBuZyIsCiAgICAgICAgICAgICJzaXplcyI6ICI1MTJ4NTEyIiwKICAgICAgICAgICAgInR5cGUiOiAiaW1hZ2UvcG5nIgogICAgICAgIH0KICAgIF0sCiAgICAidGhlbWVfY29sb3IiOiAiI2ZmZmZmZiIsCiAgICAiYmFja2dyb3VuZF9jb2xvciI6ICIjZmZmZmZmIiwKICAgICJkaXNwbGF5IjogInN0YW5kYWxvbmUiCn0K">
-  <link rel="mask-icon" href="/premium-watches/assets/safari-pinned-tab-6186ba76.svg" color="#5bbad5">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;600&display=swap" rel="stylesheet" />
-  <!-- Modern-normalize -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
-    integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- Slider -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-  <!-- Сustom styles -->
-  
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Watch Spot</title>
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/premium-watches/assets/apple-touch-icon-eaa7f761.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnBQcGHRx9QnqyAAADMUlEQVRIx33V3YtVZRQG8N+7zznjx+hI5Rcj2sRM0YjoiAOJFkRCqKCCWEEEkVR201WEXUVE/0E3jqSBECjeCJWF3WiFlGCUkuJn6iiiOIo0TDPjPvvtYs457b2Ptm42rLWeZ32/O7BKJun1li36TJeTKJMJEkH4Tz3hsq/tXXx+OJ4UBtST2kafWZ73gUynPouNO+Nm2Rid9fGDQ0m9mkg2+sKCsj14zhsGdMpctdsPIjSJgqWGakk8WOnutUvfFKQJpuo1Oz2jQ5B4zCqXXWl5NL4zLUuOVro/8IpQhPOq981uaaKZFvnJWJliXkgTW/LlRWRW2m5GqR/91spyflOBbEr0FuHRE94zt+AaUbPeLG2yJGmGanImXjdYaujUQJcbUC/pVZIiYd0a23I1xVYGUaf1OtpSKBBkuu0wpy1+aOSwWl+uDzmCRkN0eNOyErw5nyCaa115ofIZZF6yuWC8YURodSfzjwHzWuFKBJke75iZM6W+dKQRMTNuxDWpPqm6unqjmOpUepkZ3s5PFFf86JwNukwaNSGVCp6XSGWiMRelUwRRtNHLBXjmqm5/Om6tEaN6zBFFg7Y1itjnfDODTL/tpRHd9bcXXHLIfKO6zG6ddAX87qC6RELU5V2LSt2/7XGDVjvtuNsWNGBNuWeXWwKSKNhkjVQqlclE0ZhosR5bVf2sZmGpvP1ONCirVJz2IRKJQf1m6FS1wCzTrDTopB61AsEvDrT2oxrUnWrMOjPiKZ06zDZdguk2mGZpAX7LLvdaJVXzyxD9ZdISNUlr49boL5z2A/ucynWkcAvBfSdMU8ktbJcnC/GPOlRY59I1BscMe7Rcs9vo/xEkbjj6SPi4PS6UBpqUnTJH3HsEwXe+f8g1jpcV5/z6UPh5e020/TwSl8tdmHC4zIpRQ661Jzyc+KZ04Cp+80fJL3XAsXY4hyvd171ofjGHcXeszr0NY76yx2Rb/eFC+Kiy8E64bV3hJRHccNPT5ggmnPG5gw+Bux921o+EFeqV2tbwqWfztihaZIVZrjvrbm4zW3IpfpLuT9LAKh1hst8Omy0pvpFZYy6l2qNh3xoKp2I86V+MEw1Pkis+RQAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMy0wNS0wN1QwNjoyOToyOCswMDowMIPBurEAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjMtMDUtMDdUMDY6Mjk6MjgrMDA6MDDynAINAAAAV3pUWHRSYXcgcHJvZmlsZSB0eXBlIGlwdGMAAHic4/IMCHFWKCjKT8vMSeVSAAMjCy5jCxMjE0uTFAMTIESANMNkAyOzVCDL2NTIxMzEHMQHy4BIoEouAOoXEXTyQjWVAAAAAElFTkSuQmCC"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnBQcGHRvjJu8RAAABU0lEQVQozzXQz4vMcQDG8dfn852ZJqtVy8oMs37UaK0U5UJIjgq1ctEWKbVnJS5Obps/YGvbEomDclUkJcphy3ljzYbS9pUabVa78/k4fHluT+/34ekJR+phyi1dkaxjuyU/BZJPZvKDon3FPR0hq7vopknjPvglBFudCmXReqyTkU26YZuG3Ta8B6FpIupCctA1TSTZGbskYF9UkG0xbQeyLGk7DTIhkgWXHEPSlxGcMGwgI5IcdVmB0py+NaWm48btUYjZqGkjYMWiF5ZtdsAdc84iRhfs99uGNQ3nPLdqk7ohXz2zrha98k7HlLYxOy1qgb5Z39TUBpYkPecdQnbdELKn3iqqkVHNqtcSgmEFFjwyALF6JHij539+mFWKkKOPlffdy3943UMLiqr0itYfJzXJvhgzasV9TwwE6Ie74XAjXnXbXpIRXaXPcoWXzeT5vwbgarUaajd5AAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIzLTA1LTA3VDA2OjI5OjI3KzAwOjAwdYnKWAAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMy0wNS0wN1QwNjoyOToyNyswMDowMATUcuQAAABXelRYdFJhdyBwcm9maWxlIHR5cGUgaXB0YwAAeJzj8gwIcVYoKMpPy8xJ5VIAAyMLLmMLEyMTS5MUAxMgRIA0w2QDI7NUIMvY1MjEzMQcxAfLgEigSi4A6hcRdPJCNZUAAAAASUVORK5CYII="
+    />
+    <link rel="manifest" href="data:application/manifest+json;base64,ewogICAgIm5hbWUiOiAiIiwKICAgICJzaG9ydF9uYW1lIjogIiIsCiAgICAiaWNvbnMiOiBbCiAgICAgICAgewogICAgICAgICAgICAic3JjIjogIi9hbmRyb2lkLWNocm9tZS0xOTJ4MTkyLnBuZyIsCiAgICAgICAgICAgICJzaXplcyI6ICIxOTJ4MTkyIiwKICAgICAgICAgICAgInR5cGUiOiAiaW1hZ2UvcG5nIgogICAgICAgIH0sCiAgICAgICAgewogICAgICAgICAgICAic3JjIjogIi9hbmRyb2lkLWNocm9tZS01MTJ4NTEyLnBuZyIsCiAgICAgICAgICAgICJzaXplcyI6ICI1MTJ4NTEyIiwKICAgICAgICAgICAgInR5cGUiOiAiaW1hZ2UvcG5nIgogICAgICAgIH0KICAgIF0sCiAgICAidGhlbWVfY29sb3IiOiAiI2ZmZmZmZiIsCiAgICAiYmFja2dyb3VuZF9jb2xvciI6ICIjZmZmZmZmIiwKICAgICJkaXNwbGF5IjogInN0YW5kYWxvbmUiCn0K" />
+    <link
+      rel="mask-icon"
+      href="/premium-watches/assets/safari-pinned-tab-6186ba76.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Modern-normalize -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Slider -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <!-- Сustom styles -->
+    
+    <script type="module" crossorigin src="/premium-watches/assets/index-ed25c4dd.js"></script>
+    <link rel="stylesheet" href="/premium-watches/assets/index-2f505969.css">
+  </head>
 
-  <script type="module" crossorigin src="/premium-watches/assets/index-ed25c4dd.js"></script>
-  <link rel="stylesheet" href="/premium-watches/assets/index-2f505969.css">
-</head>
-
-<body>
-  <header class="header">
+  <body>
+    <header class="header">
   <div class="container header-container">
     <nav class="header-nav">
       <a href="./index.html" class="link logo">
@@ -87,8 +114,8 @@
   </div>
 </header>
 
-  <main>
-    <section class="hero-section">
+    <main>
+      <section class="hero-section">
   <div class="container hero-container">
     <h1 class="hero-title">Welcome to our collection of premium watches</h1>
     <!-- Slider -->
@@ -246,7 +273,7 @@
   });
 </script>
 
-    <section id="about" class="about">
+      <section id="about" class="about">
   <div class="container">
     <div class="about-wrap">
       <h2 class="about-title">About us</h2>
@@ -274,7 +301,7 @@
   </div>
 </section>
 
-    <section id="catalog" class="catalog">
+      <section id="catalog" class="catalog">
   <div class="container">
     <h2 class="catalog-title">Catalog</h2>
     <ul class="catalog-list">
@@ -803,7 +830,7 @@
   </div>
 </section>
 
-    <section class="new-watches">
+      <section class="new-watches">
   <div class="container">
     <h2 class="new-watches-title">New watches</h2>
     <h3 class="new-watches-subtitle">
@@ -848,7 +875,7 @@
   </div>
 </section>
 
-    <section id="sale" class="sale-section container">
+      <section id="sale" class="sale-section container">
   <h2 class="sale-section-title">Sale</h2>
   <div class="sale-wrap">
     <div class="sale-gallery-wrap">
@@ -958,8 +985,8 @@
   </div>
 </section>
 
-  </main>
-  <footer>
+    </main>
+    <footer>
   <section class="footer">
     <div class="container">
       <div class="footer-flex-wrap">
@@ -1050,7 +1077,7 @@
     </div>
   </section>
 </footer>
-  <!-- Modal window -->
+    <!-- Modal window -->
 <div class="backdrop is-hidden" data-modal>
   <div class="modal">
     <button type="button" class="modal-close-button" data-modal-close>
@@ -1137,8 +1164,13 @@
 </div>
 
 
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-</body>
-
+  </body>
 </html>
